@@ -1,0 +1,3 @@
+<?
+$MESS["CONTACTS"] = "Contacts information";
+?>
