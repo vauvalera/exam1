@@ -5,7 +5,7 @@ $aMenuLinks = Array(
 		"О компании", 
 		"./", 
 		Array(), 
-		Array(), 
+		Array("TEXT2"=>"Только для1111"), 
 		"" 
 	),
 	Array(

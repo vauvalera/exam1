@@ -2,6 +2,7 @@
 
 <?if (!empty($arResult)):?>
 <nav class="nav">
+
             <div class="inner-wrap">
                 <div class="menu-block popup-wrap">
                     <a href="" class="btn-menu btn-toggle"></a>
@@ -19,23 +20,35 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>">
-			<?if(isset($arItem['PARAMS']['IMG'])):?>
-			class="main-page" style="background-img: url(<?=$arItem['PARAMS']['IMG']?>);"
-			<?endif;?><?=$arItem["TEXT"]?>
+			<li><a href="<?=$arItem["LINK"]?>">			
+			<?=$arItem["TEXT"]?>
 			</a>
-				<ul>
+				<ul class>
+			<?if(isset($arItem['PARAMS']['TEXT1'])):?>
+			<div class="menu-text">
+			<?=$arItem['PARAMS']['TEXT1']?>
+			</div>
+			<?endif?>
 		<?else:?>
-			<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+			<li><a href="<?=$arItem["LINK"]?>">
+			<?=$arItem["TEXT"]?></a>
 				<ul>
+			<?if(isset($arItem['PARAMS']['TEXT2'])):?>
+			<div class="menu-text">
+			<?=$arItem['PARAMS']['TEXT2']?>
+			</div>
+			<?endif;?>
 		<?endif?>
 
 	<?else:?>
 
 		<?if ($arItem["PERMISSION"] > "D"):?>
-
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+				<li <?if(!empty($arItem['PARAMS']['IMG'])):?>
+						class="main-page"
+			    <?endif;?>><a href="<?=$arItem["LINK"]?>"
+				
+				><?=$arItem["TEXT"]?></a></li>
 			<?else:?>
 				<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>

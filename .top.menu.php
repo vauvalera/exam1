@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"a", 
+		"...", 
 		"/", 
 		Array(), 
 		Array("IMG"=>"/local/templates/exam1/img/spr/btn-home.png"), 
@@ -11,7 +11,7 @@ $aMenuLinks = Array(
 		"Компания", 
 		"/company/", 
 		Array(), 
-		Array(), 
+		Array("TEXT1"=>"Только для компании"), 
 		"" 
 	),
 	Array(
@@ -38,6 +38,20 @@ $aMenuLinks = Array(
 	Array(
 		"Партнерам", 
 		"/partneram/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/rew/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поиск", 
+		"/search/", 
 		Array(), 
 		Array(), 
 		"" 

@@ -13,7 +13,7 @@ $APPLICATION->SetTitle("");
 		"MENU_CACHE_GET_VARS" => array(""),
 		"MAX_LEVEL" => "1",
 		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "N",
+		"USE_EXT" => "Y",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	)
